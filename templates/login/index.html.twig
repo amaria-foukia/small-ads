@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Login{% endblock %}
+
+{% block body %}
+
+    {% if error %}
+        <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+
+    <section class="w-50 mx-auto" style="min-height: 500px">
+
+        <form action="{{ path('app_login') }}" method="post">
+            {% if app.user %}
+                <div class="mb-3">
+                    You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
+                </div>
+            {% endif %}
+
+            <h1 class="h3 my-5 font-weight-normal text-center">Connectez-vous à votre espace !</h1>
+
+            <label for="username" class="form-label my-2">Email:</label>
+            <input class="form-control" type="text" id="username" name="_username" value="{{ last_username }}"/>
+
+            <label for="password" class="form-label my-2">Password:</label>
+            <input class="form-control" type="password" id="password" name="_password"/>
+
+            <button class="btn btn-success mt-2" type="submit">Connexion</button>
+
+        </form>
+
+        <a href="{{ path('app_register') }}"><p class="text-center text-primary mt-4">Pas encore inscrit.e ?<b> Inscrivez-vous !</b></p></a>
+
+    </section>
+{% endblock %}
