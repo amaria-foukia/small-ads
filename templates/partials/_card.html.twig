@@ -1,0 +1,9 @@
+<div class="card border-secondary border-opacity-25 mb-3" style="max-width: 20rem;">
+    <img class="card-img-top img-product" src="/uploads/pictures/{{ ad.pictureFilename ?? 'ads.png' }}" alt="image-produit">
+    <div class="card-body">
+        <div class="card-title h4">{{ ad.title }}</div>
+        <p class="card-text" style="max-width: 20rem";>{{ ad.text }}</p>
+        <p class="card-text text-primary" ><b>Contactez le : {{ ad.author.telephone }}</b></p>
+        <p class="card-text text-dark small">Publiée le : {{ ad.date|date('d/m/Y') }}</p>
+    </div>
+</div>

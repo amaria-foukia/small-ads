@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+
+*{
+    box-sizing:border-box;
+}
+
+section{
+    padding: 1.25rem;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+img {
+    object-fit: cover;
+}
+
+h1, .navbar-brand{
+    font-family: 'Bad Script', cursive !important;
+    font-weight: bolder !important;
+}
