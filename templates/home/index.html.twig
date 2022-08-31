@@ -9,9 +9,17 @@
         <h1 class="h2 text-center m-5">Toutes Nos Annonces</h1>
 
         <div class="container d-flex flex-wrap justify-content-around">
+
             {% for ad in ads %}
+            <a href="{{ path("app_show", {id: ad.id}) }}">
                 {% include 'partials/_card.html.twig'%}
+            </a>
             {% endfor %}
+
+        </div>
+
+        <div class="d-flex justify-content-center mt-5">
+            {{ knp_pagination_render(ads) }}
         </div>
 
     </section>

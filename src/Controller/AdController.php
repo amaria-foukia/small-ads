@@ -42,7 +42,7 @@ class AdController extends AbstractController
                 'Votre annonce a été publiée avec succès !'
             );
 
-            return $this->redirectToRoute('app_home');
+            return $this->redirectToRoute('app_ads');
         }
 
         return $this->render('ad/new.html.twig', [
@@ -50,4 +50,6 @@ class AdController extends AbstractController
             'ad' => $ad
         ]);
     }
+
 }
+

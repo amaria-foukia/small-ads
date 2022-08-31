@@ -1,14 +1,14 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello AdController!{% endblock %}
+{% block title %}Publication{% endblock %}
 
 {% block body %}
 
     <div class="w-50 mx-auto">
-        <h2 class="text-center mt-5">Publier une annonce !</h2><span class="small d-flex justify-content-end">&nbsp; * Champ obligatoire</span>
+        <h1 class="text-center mt-5 h2">Poster une annonce !</h1><span class="small d-flex justify-content-end">* Champ obligatoire</span>
         {{ form_start(form) }}
         {{ form_widget(form) }}
-        <button class="btn btn-primary" type="submit">Sauvegarder</button>
+        <button class="btn btn-success" type="submit"> Poster votre annonce </button>
         {{ form_end(form) }}
     </div>
 

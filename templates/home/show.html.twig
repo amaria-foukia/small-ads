@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Annonce{% endblock %}
+
+{% block body %}
+
+    <section>
+
+        <h1 class="h2 text-center m-5">Détails de l'Annonce</h1>
+
+        <div class="container d-flex justify-content-around">
+
+            {% include 'partials/_card.html.twig'%}
+
+            <div class="d-flex flex-column align-items-center">
+                <p class="card-text" style="max-width: 20rem";>{{ ad.text }}</p>
+                <a class="btn btn-link" href="{{ path("app_ads") }}">
+                    <i class="fas fa-backward"></i>
+                    Retour à la liste des annonces
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+{% endblock %}

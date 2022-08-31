@@ -8,6 +8,10 @@ section{
     padding: 1.25rem;
 }
 
+footer{
+    height: 100%;
+}
+
 a {
     text-decoration: none !important;
 }
@@ -16,7 +20,18 @@ img {
     object-fit: cover;
 }
 
+img.img-ad{
+    object-fit: cover;
+    width: 20rem;
+}
+
 h1, .navbar-brand{
     font-family: 'Bad Script', cursive !important;
     font-weight: bolder !important;
+}
+
+/************Form**********/
+
+label.required:after {
+    content: "*";
 }
